@@ -1,6 +1,20 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../components/Authprovider/AuthProvider";
+import swal from 'sweetalert';
 
 const Navbar = () => {
+    const {user ,logOut}= useContext(AuthContext)
+
+    const handleLogOut= ()=>{
+        logOut()
+        .then(swal({
+            title: "Log Out ",
+            icon: "success",
+            button:"ok"
+          }))
+        .catch()
+    }
     return (
         <div>
             <div className="navbar bg-green-300">
@@ -36,7 +50,16 @@ const Navbar = () => {
       </label>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <li>Name</li>
-        <li><Link to={'/login'}>Login</Link></li>
+        <li>    
+        {
+    user ? 
+    <Link onClick={handleLogOut}> Logout </Link>
+    :
+              <Link to={'/login'}>Login</Link>
+              
+ }        
+            
+            </li>
       </ul>
     </div>
 

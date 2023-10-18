@@ -1,6 +1,6 @@
 [
     {
-      "id": 1,
+      "id":1,
       "brand_name": "Nike",
       "brand_image": "https://i.ibb.co/B4Y12wG/nike-brand-removebg-preview.png"
     },
@@ -22,7 +22,7 @@
     {
       "id": 5,
       "brand_name": "H&M",
-      "brand_image": "https://i.ibb.co/swdMJtL/HM-Logo-removebg-preview.png"
+      "brand_image": "https://i.ibb.co/7vdk2Bh/zara-removebg-preview.png"
     },
     {
       "id": 6,

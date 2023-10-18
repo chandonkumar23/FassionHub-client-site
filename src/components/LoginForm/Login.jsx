@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Authprovider/AuthProvider";
 import swal from "sweetalert";
 import GoogleLogin from "../GoogleLogin/GoogleLogin";
@@ -8,6 +8,8 @@ import GoogleLogin from "../GoogleLogin/GoogleLogin";
 const Login = () => {
 
     const { SignIN} = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
     const [sinerror , setSinerror] = useState('');
     
 const handleLogin = e =>{
@@ -22,6 +24,7 @@ const handleLogin = e =>{
       if(SignIN){
         swal("Log In", "", "success");
       }
+      navigate(location ?.state ? location.state : '/' );
    
     })
     .catch(error =>{

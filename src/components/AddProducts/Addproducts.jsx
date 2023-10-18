@@ -1,4 +1,5 @@
 import swal from "sweetalert";
+import BrandInput from "../BrandInput/BrandInput";
 
 const Addproducts = () => {
    
@@ -119,7 +120,7 @@ const Addproducts = () => {
                 </div>
 
 
-
+<BrandInput></BrandInput>
         </div>
       </div>
    </div>

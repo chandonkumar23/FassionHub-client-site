@@ -5,6 +5,8 @@ import Addproducts from "../components/AddProducts/Addproducts";
 import Mycart from "../components/Cart/Mycart";
 import Login from "../components/LoginForm/Login";
 import Rejister from "../components/Rejister/rejister";
+import BrandCollection from "../components/BrandCollection/BrandCollection";
+import PrivetRoute from "../components/PrivetRoute/PrivetRoute";
 
 
 
@@ -17,11 +19,12 @@ const routers = createBrowserRouter([
         {
             path:'/',
             element:<Home></Home>,
-            loader: () => fetch('/data.json')
+            loader: () => fetch('http://localhost:5000/brand'),
+            
         },
         {
             path:'/add',
-            element:<Addproducts></Addproducts>
+            element:<PrivetRoute><Addproducts></Addproducts></PrivetRoute>
         },
         {
             path:'/cart',
@@ -34,7 +37,13 @@ const routers = createBrowserRouter([
         {
             path:'/rejister',
             element:<Rejister></Rejister>
-        }
+        },
+        {
+            path:'/products/:id',
+            element:<PrivetRoute><BrandCollection></BrandCollection></PrivetRoute>,
+            loader: () => fetch('http://localhost:5000/product'),
+        },
+        
     ]
   }
 ])

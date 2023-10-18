@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Authprovider/AuthProvider";
 import swal from "sweetalert";
+import GoogleLogin from "../GoogleLogin/GoogleLogin";
 
 
 const Rejister = () => {
@@ -90,8 +91,10 @@ const Rejister = () => {
           <button className="btn btn-[#3ea73e]">Rejister</button>
         </div>
       </form>
+      <GoogleLogin></GoogleLogin>
       <p>Already have an account <Link className="text-red-600 font-semibold" to={'/login'}>Login</Link></p>
       </div>
+      
      </div>
      </div>
     </div>

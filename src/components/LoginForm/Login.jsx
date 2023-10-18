@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Authprovider/AuthProvider";
 import swal from "sweetalert";
+import GoogleLogin from "../GoogleLogin/GoogleLogin";
 
 const Login = () => {
 
@@ -61,6 +62,7 @@ const handleLogin = e =>{
           <button className="btn btn-[#3ea73e]">Login</button>
         </div>
       </form>
+     <GoogleLogin></GoogleLogin>
       <p>Do not have an account <Link className="text-red-600 font-semibold" to={'/rejister'}>Rejister</Link></p>
       </div>
      </div>

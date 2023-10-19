@@ -1,5 +1,6 @@
 import swal from "sweetalert";
 import BrandInput from "../BrandInput/BrandInput";
+import SliderInput from "../SliderInput";
 
 const Addproducts = () => {
    
@@ -13,8 +14,12 @@ const Addproducts = () => {
         const price = form.price.value;
         const rating = form.rating.value;
         const url = form.url.value;
+        const sliderone = form.url.value;
+        const slidertow = form.url.value;
+        const sliderthree = form.url.value;
+
         const description = form.description.value;  
-        const addproducts = {name,brand,rating,type,price,url,description}
+        const addproducts = {name,brand,rating,type,price,url,sliderone,slidertow,sliderthree,description}
         console.log(addproducts);
         
         // send data
@@ -31,17 +36,9 @@ const Addproducts = () => {
             if(data.insertedId){
                 swal("Product Added","","success");
             }
-        })
-
-
-
-        
-       
+        })   
         
     }
-
-
-
 
     return (
         <div>
@@ -109,9 +106,16 @@ const Addproducts = () => {
                            <span className="label-text text-green-500 font-semibold" >Photo</span>
                            </label>
                             <label className="input-group">
-                          
-                            <input  type="text" placeholder="Enter photo URL" name="url" className="input input-bordered w-full" /> 
-                                      
+                            <input  type="text" placeholder="Enter photo URL" name="url" className="input input-bordered w-full" />                                     
+                            </label>
+                            <label className="input-group">
+                            <input  type="text" placeholder="Enter photo URL" name="sliderone" className="input input-bordered w-full" />                                     
+                            </label>
+                            <label className="input-group">
+                            <input  type="text" placeholder="Enter photo URL" name="slidertow" className="input input-bordered w-full" />                                     
+                            </label>
+                            <label className="input-group">
+                            <input  type="text" placeholder="Enter photo URL" name="sliderthree" className="input input-bordered w-full" />                                     
                             </label>
                             <button className="btn bg-[#55ae00] w-full mt-4">Add Product</button>   
                         </form>                   
@@ -119,7 +123,7 @@ const Addproducts = () => {
                 </div>
                 </div>
 
-
+<SliderInput></SliderInput>
 <BrandInput></BrandInput>
         </div>
       </div>

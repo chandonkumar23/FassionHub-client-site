@@ -27,15 +27,12 @@ const BrandInput = () => {
                 swal("Product Added","","success");
             }
         })
-
-
-
     } 
     return (
         <div>
           <form onSubmit={handleBrand}>
           <label className="label">
-     <span className="label-text text-green-500 font-semibold">Name</span>
+        <span className="label-text text-green-500 font-semibold">Name</span>
        </label>
           <label className="input-group">
             <input type="text" placeholder="Enter product name" name="brand" className="input input-bordered" />                

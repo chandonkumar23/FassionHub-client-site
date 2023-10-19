@@ -7,6 +7,7 @@ import Login from "../components/LoginForm/Login";
 import Rejister from "../components/Rejister/rejister";
 import BrandCollection from "../components/BrandCollection/BrandCollection";
 import PrivetRoute from "../components/PrivetRoute/PrivetRoute";
+import Detailes from "../components/Detailes/Detailes";
 
 
 
@@ -43,6 +44,11 @@ const routers = createBrowserRouter([
             element:<PrivetRoute><BrandCollection></BrandCollection></PrivetRoute>,
             loader: () => fetch('http://localhost:5000/product'),
         },
+        {
+            path:'/detailes/:name',
+            element:<Detailes></Detailes>,
+            loader:() => fetch('http://localhost:5000/product'),
+        }
         
     ]
   }

@@ -1,13 +1,12 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "../Banner/Banner";
 import ServiceBrand from "./ServiceCatagory/ServiceBrand";
-import Slider from "../Slider/Slider";
+
 
 
 const Home = () => {
 
  const products = useLoaderData();
-  
     return (
         <div>
           <Banner></Banner>

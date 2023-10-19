@@ -1,7 +1,4 @@
 import swal from "sweetalert";
-import BrandInput from "../BrandInput/BrandInput";
-import SliderInput from "../SliderInput";
-
 const Addproducts = () => {
    
     const handleAddProducts = event =>{
@@ -108,23 +105,15 @@ const Addproducts = () => {
                             <label className="input-group">
                             <input  type="text" placeholder="Enter photo URL" name="url" className="input input-bordered w-full" />                                     
                             </label>
-                            <label className="input-group">
-                            <input  type="text" placeholder="Enter photo URL" name="sliderone" className="input input-bordered w-full" />                                     
-                            </label>
-                            <label className="input-group">
-                            <input  type="text" placeholder="Enter photo URL" name="slidertow" className="input input-bordered w-full" />                                     
-                            </label>
-                            <label className="input-group">
-                            <input  type="text" placeholder="Enter photo URL" name="sliderthree" className="input input-bordered w-full" />                                     
-                            </label>
+                           
                             <button className="btn bg-[#55ae00] w-full mt-4">Add Product</button>   
                         </form>                   
                     </div>
                 </div>
                 </div>
 
-<SliderInput></SliderInput>
-<BrandInput></BrandInput>
+{/* <SliderInput></SliderInput>
+<BrandInput></BrandInput> */}
         </div>
       </div>
    </div>

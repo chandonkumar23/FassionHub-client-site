@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
 import { AiFillStar } from "react-icons/ai";
-import Slider from "../Slider/Slider";
+import { Link } from "react-router-dom";
+
 
 const Brands = ({product} ) => {
-    const {name,brand,rating,type,price,url,description} =  product || {};
+    const {name,brand,rating,type,price,url} =  product || {};
     
     return (
       
@@ -17,17 +18,13 @@ const Brands = ({product} ) => {
        <div className="badge badge-secondary">{brand}
        </div> <h2>Price: $ {price}</h2>
      </h2>
-     <p>{description}</p>
       <div className="card-actions justify-end">
       <div className="badge badge-outline"> Reting: {rating}<AiFillStar className="text-yellow-500 font-bold"></AiFillStar></div> 
       <div className="badge badge-outline">{type}</div>
     </div>
-    <button></button>
+    <Link className="btn btn-error flex justify-center mx-auto w-[130px] hover:bg-orange-400" to={`/detailes/${name}`}>Detailes</Link> 
   </div>
-</div>
-
-                
-            
+</div>     
         </div>
     );
 };

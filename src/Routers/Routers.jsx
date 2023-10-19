@@ -39,7 +39,7 @@ const routers = createBrowserRouter([
             element:<Rejister></Rejister>
         },
         {
-            path:'/products/:id',
+            path:'/products/:name',
             element:<PrivetRoute><BrandCollection></BrandCollection></PrivetRoute>,
             loader: () => fetch('http://localhost:5000/product'),
         },

@@ -7,9 +7,9 @@ const BrandInput = () => {
         event.preventDefault();
 
         const form = event.target;
-        const name = form.name.value;
+        const brand = form.brand.value;
         const url = form.url.value; 
-        const addBrands = {name,url}
+        const addBrands = {brand,url}
         console.log(addBrands);
         
         // send data
@@ -38,7 +38,7 @@ const BrandInput = () => {
      <span className="label-text text-green-500 font-semibold">Name</span>
        </label>
           <label className="input-group">
-            <input type="text" placeholder="Enter product name" name="name" className="input input-bordered" />                
+            <input type="text" placeholder="Enter product name" name="brand" className="input input-bordered" />                
              </label>
              <label className="label">
              <span className="label-text text-green-500 font-semibold" >Photo</span>

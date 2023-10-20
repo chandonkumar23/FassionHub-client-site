@@ -1,13 +1,14 @@
+import { Link } from "react-router-dom";
 import swal from "sweetalert";
 
 
 /* eslint-disable react/prop-types */
 const  DetailesCart = ({findProducts}) => {
-   
+
     
     const {name,brand,rating,type,price,url,description} =  findProducts || {};
 			
-   const newProducts = {name,brand,rating,type,price,url,description}
+   const newProducts = { name,brand,rating,type,price,url,description,}
   const handleAddProducts = () =>{
     // fetch(`http://localhost:5000/addCart/${uid}`,{
         fetch('http://localhost:5000/addCart',{
@@ -43,8 +44,7 @@ const  DetailesCart = ({findProducts}) => {
                 <p>product name:{name}</p>
                 <p>product type:{type}</p>
                 <button onClick={handleAddProducts} className="btn">Add to cart</button>
-                <button  className="btn outline-1">update</button>
-
+                <button className="btn outline-1"><Link to={`/update/${name}`}>update</Link></button>
                </div>
                
             </div>

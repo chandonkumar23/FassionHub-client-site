@@ -11,12 +11,10 @@ const Addproducts = () => {
         const price = form.price.value;
         const rating = form.rating.value;
         const url = form.url.value;
-        const sliderone = form.url.value;
-        const slidertow = form.url.value;
-        const sliderthree = form.url.value;
+       
 
         const description = form.description.value;  
-        const addproducts = {name,brand,rating,type,price,url,sliderone,slidertow,sliderthree,description}
+        const addproducts = {name,brand,rating,type,price,url,description}
         console.log(addproducts);
         
         // send data

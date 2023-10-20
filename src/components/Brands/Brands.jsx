@@ -13,11 +13,11 @@ const Brands = ({product} ) => {
             <div className="card  bg-base-100 shadow-xl">
             <figure><img className="h-[300px] w-[300px]" src={url} alt="Shoes" /></figure>
             <div className="card-body">
-            <h2 className="card-title">
+            <div className="card-title">
          {name}
        <div className="badge badge-secondary">{brand}
        </div> <h2>Price: $ {price}</h2>
-     </h2>
+       </div>
       <div className="card-actions justify-end">
       <div className="badge badge-outline"> Reting: {rating}<AiFillStar className="text-yellow-500 font-bold"></AiFillStar></div> 
       <div className="badge badge-outline">{type}</div>

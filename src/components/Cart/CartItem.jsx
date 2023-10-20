@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import Swal from "sweetalert2";
 
 const CartItem = ({product , cartProducts, setCartProducts}) => {
-    const { _id, name,brand,rating,type,price,url,description} =  product || {};
+    const { _id, name,brand,type,price,url} =  product || {};
 
    const handleDelete =_id =>{
   console.log(_id)

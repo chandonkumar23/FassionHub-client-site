@@ -8,7 +8,8 @@ import Rejister from "../components/Rejister/rejister";
 import BrandCollection from "../components/BrandCollection/BrandCollection";
 import PrivetRoute from "../components/PrivetRoute/PrivetRoute";
 import Detailes from "../components/Detailes/Detailes";
-import ErrorPage from "../components/ErrorPage/ErrorPage";
+
+import Update from "../components/Update/Update";
 
 
 
@@ -17,7 +18,7 @@ const routers = createBrowserRouter([
   {
     path:'/',
     element:<Root></Root>,
-    errorElement:<ErrorPage></ErrorPage>,
+    // errorElement:<ErrorPage></ErrorPage>,
     children:[
         {
             path:'/',
@@ -31,7 +32,7 @@ const routers = createBrowserRouter([
         },
         {
             path:'/cart/:uid',
-            element:<Mycart></Mycart>,
+            element: <PrivetRoute><Mycart></Mycart></PrivetRoute>,
             // loader:({params})=>fetch(`http://localhost:5000/addCart/${params.uid}`),
             loader:()=> fetch('http://localhost:5000/addCart'),
          
@@ -51,10 +52,14 @@ const routers = createBrowserRouter([
         },
         {
             path:'/detailes/:name',
-            element:<Detailes></Detailes>,
+            element: <PrivetRoute><Detailes></Detailes></PrivetRoute>,
             loader:() => fetch('http://localhost:5000/product'),
+        },
+        {
+           path: 'update/:name',
+           element:<Update></Update>,
+           loader: ()=> fetch('http://localhost:5000/product')
         }
-        
     ]
   }
 ])

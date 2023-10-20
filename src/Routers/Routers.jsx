@@ -8,6 +8,7 @@ import Rejister from "../components/Rejister/rejister";
 import BrandCollection from "../components/BrandCollection/BrandCollection";
 import PrivetRoute from "../components/PrivetRoute/PrivetRoute";
 import Detailes from "../components/Detailes/Detailes";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
 
 
 
@@ -16,6 +17,7 @@ const routers = createBrowserRouter([
   {
     path:'/',
     element:<Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
         {
             path:'/',
@@ -28,8 +30,11 @@ const routers = createBrowserRouter([
             element:<PrivetRoute><Addproducts></Addproducts></PrivetRoute>
         },
         {
-            path:'/cart',
-            element:<Mycart></Mycart>
+            path:'/cart/:uid',
+            element:<Mycart></Mycart>,
+            // loader:({params})=>fetch(`http://localhost:5000/addCart/${params.uid}`),
+            loader:()=> fetch('http://localhost:5000/addCart'),
+         
         },
         {
             path:'/login',

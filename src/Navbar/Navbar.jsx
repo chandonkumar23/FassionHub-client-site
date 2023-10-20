@@ -26,7 +26,7 @@ const Navbar = () => {
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <li><Link to={"/"}>Home</Link></li>
         <li><Link to={"/add"}>Add Product</Link></li>
-        <li><Link to={"/card"}>My Carts</Link></li>
+        <li><Link to={"/cart/:uid"}>My Carts</Link></li>
         
       
       </ul>
@@ -37,7 +37,7 @@ const Navbar = () => {
     <ul className="menu menu-horizontal px-1">
         <li className="font-semibold text-xl"><Link to={"/"}>Home</Link></li>
         <li className="font-semibold text-xl"><Link to={"/add"}>Add Product</Link></li>
-        <li className="font-semibold text-xl" ><Link to={"/cart"}>My Carts</Link></li>
+        <li className="font-semibold text-xl" ><Link to={"/cart/:uid"}>My Carts</Link></li>
     </ul>
   </div>
   <div className="navbar-end">

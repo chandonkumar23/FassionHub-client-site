@@ -1,27 +1,33 @@
 import swal from "sweetalert";
 
+
 /* eslint-disable react/prop-types */
-const DetailesCart = ({findProducts}) => {
+const  DetailesCart = ({findProducts}) => {
+   
+    
     const {name,brand,rating,type,price,url,description} =  findProducts || {};
-
-
-    const  handleAddCart= () =>{
+			
+   const newProducts = {name,brand,rating,type,price,url,description}
+  const handleAddProducts = () =>{
+    // fetch(`http://localhost:5000/addCart/${uid}`,{
         fetch('http://localhost:5000/addCart',{
-            method:'POST',
-            headers:{
-                'content-type':'application/json'
-            },
-            body:JSON.stringify(findProducts)
-        })
-        .then(res=>res.json())
-        .then(data =>{
-            console.log(data)
-            if(data.insertedId){
-                swal("Product Added","","success");
-            }
-        })   
+        method:'POST',
+        headers: { 
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(newProducts),
+       
+    })
+    .then(res =>res.json())
+    .then(data =>{
+        console.log(data);
+        if(data.insertedId){
+            swal("Product Added","","success");
+        }
+    })
+  }
 
-    }
+   
 
     return (
         <div className="p-8 flex justify-between  mx-auto">
@@ -36,7 +42,7 @@ const DetailesCart = ({findProducts}) => {
                 <p>Product brand:{brand}</p>
                 <p>product name:{name}</p>
                 <p>product type:{type}</p>
-                <button onClick={handleAddCart} className="btn">Add to cart</button>
+                <button onClick={handleAddProducts} className="btn">Add to cart</button>
                 <button  className="btn outline-1">update</button>
 
                </div>

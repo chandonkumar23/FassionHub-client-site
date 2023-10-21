@@ -1,11 +1,11 @@
-import { useContext } from "react";
+import { useContext,  } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../components/Authprovider/AuthProvider";
 import swal from 'sweetalert';
 
 const Navbar = () => {
     const {user ,logOut}= useContext(AuthContext)
-
+   
     const handleLogOut= ()=>{
         logOut()
         .then(swal({
@@ -38,6 +38,7 @@ const Navbar = () => {
         <li className="font-semibold text-xl"><Link to={"/"}>Home</Link></li>
         <li className="font-semibold text-xl"><Link to={"/add"}>Add Product</Link></li>
         <li className="font-semibold text-xl" ><Link to={"/cart/:uid"}>My Carts</Link></li>
+        <li className="font-semibold text-xl" ><Link to={"/login"}>Login</Link></li>
     </ul>
   </div>
   <div className="navbar-end">
@@ -69,6 +70,13 @@ const Navbar = () => {
   </div>
 </div>
         </div>
+
+
+
+
+
+
+
     );
 };
 

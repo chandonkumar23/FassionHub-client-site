@@ -10,7 +10,7 @@ const Login = () => {
     const { SignIN} = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
-    const [sinerror , setSinerror] = useState('');
+    const [sinerror , setSinerror] = useState("");
     
 const handleLogin = e =>{
     e.preventDefault();
@@ -28,6 +28,7 @@ const handleLogin = e =>{
    
     })
     .catch(error =>{
+  
       setSinerror.error(error.message)
     })
    

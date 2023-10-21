@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+
 import swal from "sweetalert";
 
 
@@ -44,7 +44,9 @@ const  DetailesCart = ({findProducts}) => {
                 <p>product name:{name}</p>
                 <p>product type:{type}</p>
                 <button onClick={handleAddProducts} className="btn">Add to cart</button>
-                <button className="btn outline-1"><Link to={`/update/${name}`}>update</Link></button>
+                {/* <button className="btn outline-1"><Link to={`/update/${name}`}>update</Link></button> */}
+               
+
                </div>
                
             </div>

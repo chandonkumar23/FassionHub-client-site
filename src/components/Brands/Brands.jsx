@@ -10,8 +10,8 @@ const Brands = ({product} ) => {
       
         <div className="p-6">
           
-            <div className="card  bg-base-100 shadow-xl">
-            <figure><img className="h-[300px] w-[300px]" src={url} alt="Shoes" /></figure>
+            <div className="card bg-base-100 shadow-xl border-3 border-red-600">
+            <figure><img className="h-[200px] w-[200px]" src={url} alt="Shoes" /></figure>
             <div className="card-body">
             <div className="card-title">
          {name}
@@ -22,7 +22,11 @@ const Brands = ({product} ) => {
       <div className="badge badge-outline"> Reting: {rating}<AiFillStar className="text-yellow-500 font-bold"></AiFillStar></div> 
       <div className="badge badge-outline">{type}</div>
     </div>
-    <Link className="btn btn-error flex justify-center mx-auto w-[130px] hover:bg-orange-400" to={`/detailes/${name}`}>Detailes</Link> 
+   <div className="flex">
+   <Link className="btn  flex justify-center mx-auto w-[130px] bg-[#00b100] hover:bg-[#00e400]" to={`/detailes/${name}`}>Detailes</Link> 
+   <Link className="btn  flex justify-center mx-auto w-[130px] bg-[#00b100] hover:bg-[#00e400]" to={`/update/${name}`}>update</Link>
+   </div>
+   
   </div>
 </div>     
         </div>

@@ -1,5 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
-import swal from "sweetalert";
+
 
 
 const Update = () => {

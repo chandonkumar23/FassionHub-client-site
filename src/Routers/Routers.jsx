@@ -10,6 +10,7 @@ import PrivetRoute from "../components/PrivetRoute/PrivetRoute";
 import Detailes from "../components/Detailes/Detailes";
 
 import Update from "../components/Update/Update";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
 
 
 
@@ -18,7 +19,7 @@ const routers = createBrowserRouter([
   {
     path:'/',
     element:<Root></Root>,
-    // errorElement:<ErrorPage></ErrorPage>,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
         {
             path:'/',
@@ -56,7 +57,7 @@ const routers = createBrowserRouter([
             loader:() => fetch('http://localhost:5000/product'),
         },
         {
-           path: 'update/:name',
+           path: '/update/:name',
            element:<Update></Update>,
            loader: ()=> fetch('http://localhost:5000/product')
         }

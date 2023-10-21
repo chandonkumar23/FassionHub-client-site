@@ -21,7 +21,7 @@ const CartItem = ({product , cartProducts, setCartProducts}) => {
     //     'Your file has been deleted.',
     //     'success'
     //   )
-    fetch (`http://localhost:5000/addCart/${_id}`,{
+    fetch (`https://pratice-coffee-server-cqnmgkvz5-chandonkumar23.vercel.app/addCart/${_id}`,{
         method:'DELETE'
     })
     .then(res => res.json())

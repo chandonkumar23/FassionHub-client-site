@@ -18,7 +18,7 @@ const Addproducts = () => {
         console.log(addproducts);
         
         // send data
-        fetch('http://localhost:5000/product',{
+        fetch('https://pratice-coffee-server-cqnmgkvz5-chandonkumar23.vercel.app/product',{
             method:'POST',
             headers:{
                 'content-type':'application/json'

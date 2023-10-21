@@ -12,27 +12,28 @@ const Login = () => {
     const navigate = useNavigate();
     const [sinerror , setSinerror] = useState("");
     
-const handleLogin = e =>{
-    e.preventDefault();
-    console.log(e.currentTarget);
-    const form = new FormData(e.currentTarget);
-    const email = form.get('email'); 
-    const password = form.get('password');
-    console.log(email,password);
-    SignIN(email , password)
-    .then(result =>{
-      if(SignIN){
-        swal("Log In", "", "success");
+    const handleLogin = e =>{
+      e.preventDefault();
+      console.log(e.currentTarget);
+      const form = new FormData(e.currentTarget);
+      const email = form.get('email');
+      const password = form.get('password');
+      console.log(email,password);
+      SignIN (email ,password)
+      .then( result =>{
+        if(SignIN){
+          swal("Log In", "", "success");
+        }
+        navigate(location ?.state ? location.state : '/' );
+        
       }
-      navigate(location ?.state ? location.state : '/' );
-   
-    })
-    .catch(error =>{
-  
-      setSinerror.error(error.message)
-    })
-   
-}
+        
+      )
+      .catch(error =>{
+        
+          setSinerror(error.message);
+      })
+  }
 
     return (
         <div>
@@ -58,16 +59,17 @@ const handleLogin = e =>{
             <span className="label-text text-white ">Password</span>
              </label>
              <input type="password" placeholder="password" name="password" className="input input-bordered" required />
-             {
-              sinerror && <p className="text-red-700">{sinerror}</p>
-             }
+           
            </div>
            <div className="form-control mt-6">
           <button className="btn btn-[#3ea73e]">Login</button>
+          {
+              sinerror && <p className="text-red-700">{sinerror}</p>
+             }
         </div>
       </form>
      <GoogleLogin></GoogleLogin>
-      <p>Do not have an account <Link className="text-red-600 font-semibold" to={'/rejister'}>Rejister</Link></p>
+      <p>Do not have an account <Link className="text-red-600 font-semibold" to={'/register'}>Register</Link></p>
       </div>
      </div>
      </div>

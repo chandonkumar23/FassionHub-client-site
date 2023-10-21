@@ -11,7 +11,7 @@ const  DetailesCart = ({findProducts}) => {
    const newProducts = { name,brand,rating,type,price,url,description,}
   const handleAddProducts = () =>{
     // fetch(`http://localhost:5000/addCart/${uid}`,{
-        fetch('http://localhost:5000/addCart',{
+        fetch('https://pratice-coffee-server-cqnmgkvz5-chandonkumar23.vercel.app/addCart',{
         method:'POST',
         headers: { 
             'content-type': 'application/json'

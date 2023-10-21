@@ -56,7 +56,7 @@ const Rejister = () => {
     <div className="hero min-h-screen">
   <div className="hero-content flex-col ">  
   <div>
-    <h2 className="text-2xl">Rejister Now</h2>
+    <h2 className="text-2xl">Register Now</h2>
     </div>
     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-slate-700 bg-opacity-60 border-2 ">
       <form onSubmit={handleRegister} className="card-body">

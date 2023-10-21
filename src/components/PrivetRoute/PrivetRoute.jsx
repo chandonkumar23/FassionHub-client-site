@@ -5,9 +5,12 @@ import { Navigate, useLocation } from "react-router-dom";
 
 
 const PrivetRoute = ({children}) => {
-    const {user} = useContext(AuthContext);
+    const {user,load} = useContext(AuthContext);
     const location = useLocation()
     console.log(location.pathname)
+    if(load){
+        return <span className="loading loading-spinner text-accent flex justify-center mx-auto text-5xl"></span>
+    }
     if(user){
         return children;
     }

@@ -24,7 +24,7 @@ const routers = createBrowserRouter([
         {
             path:'/',
             element:<Home></Home>,
-            loader: () => fetch('http://localhost:5000/brand'),
+            loader: () => fetch('https://pratice-coffee-server-cqnmgkvz5-chandonkumar23.vercel.app/brand'),
             
         },
         {
@@ -35,7 +35,7 @@ const routers = createBrowserRouter([
             path:'/cart/:uid',
             element: <PrivetRoute><Mycart></Mycart></PrivetRoute>,
             // loader:({params})=>fetch(`http://localhost:5000/addCart/${params.uid}`),
-            loader:()=> fetch('http://localhost:5000/addCart'),
+            loader:()=> fetch('https://pratice-coffee-server-cqnmgkvz5-chandonkumar23.vercel.app/addCart'),
          
         },
         {
@@ -43,23 +43,23 @@ const routers = createBrowserRouter([
             element:<Login></Login>
         },
         {
-            path:'/rejister',
+            path:'/register',
             element:<Rejister></Rejister>
         },
         {
             path:'/products/:name',
             element:<PrivetRoute><BrandCollection></BrandCollection></PrivetRoute>,
-            loader: () => fetch('http://localhost:5000/product'),
+            loader: () => fetch('https://pratice-coffee-server-cqnmgkvz5-chandonkumar23.vercel.app/product'),
         },
         {
             path:'/detailes/:name',
             element: <PrivetRoute><Detailes></Detailes></PrivetRoute>,
-            loader:() => fetch('http://localhost:5000/product'),
+            loader:() => fetch('https://pratice-coffee-server-cqnmgkvz5-chandonkumar23.vercel.app/product'),
         },
         {
            path: '/update/:name',
            element:<Update></Update>,
-           loader: ()=> fetch('http://localhost:5000/product')
+           loader: ()=> fetch('https://pratice-coffee-server-cqnmgkvz5-chandonkumar23.vercel.app/product')
         }
     ]
   }

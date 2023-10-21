@@ -1,8 +1,13 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Fassion Hub
 
-Currently, two official plugins are available:
+Live Link : https://coffee-client-side.web.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Features
+
+- this web site is fassion brand products selling website user can choice and buy products esaly
+- user can add products. when clicking add product then show a form and user esaly add products.
+- all products brand name have on the home page.clicking the one brand then show 4 products  of this brand and one slider and detailes button and update button
+- on clicking the detailes button  show all informaion of this products. 
+- when user click the addcart button then add this product on mycart section and user can delete add product.

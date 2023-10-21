@@ -1,5 +1,5 @@
 import { useContext,  } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../components/Authprovider/AuthProvider";
 import swal from 'sweetalert';
 
@@ -35,10 +35,10 @@ const Navbar = () => {
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-        <li className="font-semibold text-xl"><Link to={"/"}>Home</Link></li>
-        <li className="font-semibold text-xl"><Link to={"/add"}>Add Product</Link></li>
-        <li className="font-semibold text-xl" ><Link to={"/cart/:uid"}>My Carts</Link></li>
-        <li className="font-semibold text-xl" ><Link to={"/login"}>Login</Link></li>
+        <li className="font-semibold text-xl"><NavLink to={"/"}>Home</NavLink></li>
+        <li className="font-semibold text-xl"><NavLink to={"/add"}>Add Product</NavLink></li>
+        <li className="font-semibold text-xl" ><NavLink to={"/cart/:uid"}>My Carts</NavLink></li>
+        <li className="font-semibold text-xl" ><NavLink to={"/login"}>Login</NavLink></li>
     </ul>
   </div>
   <div className="navbar-end">
@@ -46,11 +46,13 @@ const Navbar = () => {
   <div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-          <img className="border-3 border-red-600" src="https://i.ibb.co/zNtvQhH/281210250-1218528545556545-7341862132812308087-n-2.jpg" />
+          <img className="border-3 border-red-600" src="https://i.ibb.co/379yQLs/OIP-3.jpg" />
         </div>
       </label>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-        <li>Name</li>
+       
+      
+      
         <li>    
         {
     user ? 

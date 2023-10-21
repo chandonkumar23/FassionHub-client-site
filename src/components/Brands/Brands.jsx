@@ -10,7 +10,7 @@ const Brands = ({product} ) => {
       
         <div className="p-6">
           
-            <div className="card bg-base-100 shadow-xl border-3 border-red-600">
+            <div className="card bg-base-100 shadow-lg  border-3 border-red-600">
             <figure><img className="h-[200px] w-[200px]" src={url} alt="Shoes" /></figure>
             <div className="card-body">
             <div className="card-title">

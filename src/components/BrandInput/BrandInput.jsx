@@ -13,7 +13,7 @@ const BrandInput = () => {
         console.log(addBrands);
         
         // send data
-        fetch('http://localhost:5000/brand',{
+        fetch('https://pratice-coffee-server-cqnmgkvz5-chandonkumar23.vercel.app/brand',{
             method:'POST',
             headers:{
                 'content-type':'application/json'
